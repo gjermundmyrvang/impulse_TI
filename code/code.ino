@@ -119,7 +119,7 @@ void loop() {
   const float magnitude = abs(rawInput - baseline);
   envelope = updateEnvelope(magnitude, envelope);
 
-  Serial.println((int)envelope);
+  Serial.println((int)envelope); // Signal to processing
 
   if (envelope < OFF_THRESHOLD) {
     clearStrip();
